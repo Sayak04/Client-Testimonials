@@ -120,7 +120,7 @@ body {
     }
     .secondary_container {
         margin: 1rem;
-        height: max-content;
+        height: 580px;
     }
     .cust_img {
         top: 30%;
