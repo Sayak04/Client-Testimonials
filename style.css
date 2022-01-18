@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+body {
+    background-image: url("images/brandon-cormier-laqHf06jPTI-unsplash.jpg");
+    background-position: center;
+}
+.primary_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heading {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+}
+.primary_heading {
+    font-size: 4.5rem;
+    color: rgb(255, 255, 255);
+}
+.secondary_heading {
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(241, 61, 37);
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+.cust_img {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    left: 46%;
+    top: 37%;
+    z-index: 1;
+    border: 3px solid rgb(241, 61, 37);
+}
+.secondary_container {
+    position: relative;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    border-left:4px solid rgb(241, 61, 37);
+    border-right: 4px solid rgb(241, 61, 37);
+    margin:1.5rem auto;
+    max-width: 900px;
+    height: 400px;
+}
+.name {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 3.2rem;
+    font-family: 'Dongle', sans-serif;
+    font-weight: bold;
+    color: whitesmoke;
+}
+.stars {
+    text-align: center;
+    font-size: 2rem;
+}
+.checked {
+    color: rgb(241, 61, 37);
+}
+.review {
+    text-align: center;
+    margin-top: 1.2rem;
+    padding:1rem 1.8rem;
+    font-size: 2.3rem;
+    color: whitesmoke;
+    font-family: 'Dongle', sans-serif;
+    line-height: 34px;
+}
+.btn-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: whitesmoke;
+    color: rgb(241, 61, 37);
+    transform: translate(-50%,-50%);
+    border: 0.2rem solid rgb(241, 61, 37);
+    font-size: 2.2rem;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.btn-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background-color: whitesmoke;
+    color: rgb(241, 61, 37);
+    transform: translate(50%,-50%);
+    border: 0.2rem solid rgb(241, 61, 37);
+    font-size: 2.2rem;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.btn-left:hover,
+.btn-right:hover {
+    color: whitesmoke;
+    background-color: rgb(241, 61, 37);
+    transition: 0.5s;
+}
+
+
+@media(max-width:450px) {
+    .secondary_heading {
+        font-size: 1.2rem;
+    }
+    .primary_heading {
+        font-size: 1.5rem;
+    }
+    .secondary_container {
+        margin: 1rem;
+        height: max-content;
+    }
+    .cust_img {
+        top: 30%;
+        left: 30%;
+        margin-bottom: 1rem;
+    }
+    .name {
+        font-size: 3rem;
+        margin-top: 3.5rem;
+    }
+    .review {
+        font-size: 1.2rem;
+    }
+    .btn-left {
+        padding: 10px;
+        font-size: 1rem;
+    }
+    .btn-right {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
