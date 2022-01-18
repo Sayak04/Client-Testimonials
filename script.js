@@ -3,12 +3,13 @@
     const image = document.querySelector('.cust_img');
     const name = document.querySelector('.name');
     const review = document.querySelector('.review');
-    const buttons = document.querySelectorAll('.btn');
     const star1 = document.querySelector('.one');
     const star2 = document.querySelector('.two');
     const star3 = document.querySelector('.three');
     const star4 = document.querySelector('.four');
     const star5 = document.querySelector('.five');
+    const btn_left = document.querySelector('.btn-left');
+    const btn_right = document.querySelector('btn-right');
     let index = 0;
     const customers = [];
 
@@ -50,6 +51,8 @@
             star1.classList.add("checked");
             star2.classList.add("checked");
             star3.classList.add("checked");
+            star4.classList.add("checked");
+            star5.classList.add("checked");
             star4.classList.remove("checked");
             star5.classList.remove("checked");
         } else if (index == 3) {
@@ -63,6 +66,7 @@
             star2.classList.add("checked");
             star3.classList.add("checked");
             star4.classList.add("checked");
+            star5.classList.add("checked");
             star5.classList.remove("checked");
         } else if (index == 5) {
             star1.classList.add("checked");
@@ -73,35 +77,36 @@
         } else {
             star1.classList.add("checked");
             star2.classList.add("checked");
+            star3.classList.add("checked");
+            star4.classList.add("checked");
+            star5.classList.add("checked");
             star3.classList.remove("checked");
             star4.classList.remove("checked");
             star5.classList.remove("checked");
         }
     }
 
-    buttons.forEach(function (button) {
-        button.addEventListener('click', function (e) {
-            if (e.target.parentElement.classList.contains('btn-left')) {
-                if (index === 0) {
-                    index = customers.length;
-                }
-                index--;
-                remove_stars(index);
-                image.src = customers[index].img;
-                name.textContent = customers[index].name;
-                review.textContent = customers[index].text;
-            }
-            if (e.target.parentElement.classList.contains('btn-right')) {
-                if (index === customers.length) {
-                    index = -1;
-                }
-                index++;
-                remove_stars(index);
-                image.src = customers[index].img;
-                name.textContent = customers[index].name;
-                review.textContent = customers[index].text;
-            }
-        });
+    btn_left.addEventListener("click", function () {
+        if (index === 0) {
+            index = customers.length;
+        }
+        index--;
+        remove_stars(index);
+        image.src = customers[index].img;
+        name.textContent = customers[index].name;
+        review.textContent = customers[index].text;
     });
+
+    btn_right.addEventListener("click", function () {
+        if (index === customers.length) {
+            index = -1;
+        }
+        index++;
+        remove_stars(index);
+        image.src = customers[index].img;
+        name.textContent = customers[index].name;
+        review.textContent = customers[index].text;
+    });
+            
 })();
 
