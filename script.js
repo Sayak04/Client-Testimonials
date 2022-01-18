@@ -92,11 +92,11 @@
                 review.textContent = customers[index].text;
             }
             if (e.target.parentElement.classList.contains('btn-right')) {
+                if (index === customers.length) {
+                    index = -1;
+                }
                 index++;
                 remove_stars(index);
-                if (index === customers.length) {
-                    index = 0;
-                }
                 image.src = customers[index].img;
                 name.textContent = customers[index].name;
                 review.textContent = customers[index].text;
