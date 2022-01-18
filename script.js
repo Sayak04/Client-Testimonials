@@ -1,5 +1,4 @@
 
-(function () {
     const image = document.querySelector('.cust_img');
     const name = document.querySelector('.name');
     const review = document.querySelector('.review');
@@ -9,7 +8,7 @@
     const star4 = document.querySelector('.four');
     const star5 = document.querySelector('.five');
     const btn_left = document.querySelector('.btn-left');
-    const btn_right = document.querySelector('btn-right');
+    const btn_right = document.querySelector('.btn-right');
     let index = 0;
     const customers = [];
 
@@ -87,8 +86,8 @@
     }
 
     btn_left.addEventListener("click", function () {
-        if (index === 0) {
-            index = customers.length;
+        if (index == 0) {
+            index = 6;
         }
         index--;
         remove_stars(index);
@@ -98,15 +97,16 @@
     });
 
     btn_right.addEventListener("click", function () {
-        if (index === customers.length) {
+        if (index == 5) {
             index = -1;
         }
         index++;
-        remove_stars(index);
+        console.log(index);
         image.src = customers[index].img;
         name.textContent = customers[index].name;
         review.textContent = customers[index].text;
+        remove_stars(index);
     });
             
-})();
+
 
